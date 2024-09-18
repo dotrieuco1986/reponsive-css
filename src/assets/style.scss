@@ -1,4 +1,8 @@
 // style
+body{
+  margin: 0px;
+  padding: 0px;
+}
 * {
     box-sizing: border-box;
   }
@@ -6,58 +10,72 @@
 
 /* Container for flexboxes */
 .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  /* Create four equal columns */
-  .column {
-    width: 15%;
-    .content {
-        width: 100%;
-        padding: 5px;
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0% 5%;
+  .title{
+    padding-left:5px;
+    max-width: 100%;
+    margin-top: 0px;
+  } 
+}
+
+/* Create four equal columns */
+.column {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: calc(100% / 6);   
+}
+
+.content {
+  width: 100%;
+  padding: 5px;
 
   img {
     width: inherit;
     height: 150px;
     object-fit: cover;
-    object-position: 100% 50%;
-   
+    object-position: 100% 40%;
+  
   }
 
   .text-truncate {
-    max-width: 150px;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
- 
-    /* On screens that are 992px wide or less, go from four columns to two columns */
-  @media screen and (max-width: 1280px) {
-    .column {
-      width: 25%;
-        .content {
-            width: 100%;
-        }
-    }
-  }
-  /* On screens that are 992px wide or less, go from four columns to two columns */
-  @media screen and (max-width: 992px) {
-    
-    .column {
-      width: 100%;
-        .content {
-            width: 100%;
-        }
-    }
-  }
+}   
   
-  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .row {
-      flex-direction: column;
+ 
+    /* On screens that are 1280px wide or less, go from four columns to two columns */
+@media screen and (max-width: 1280px) {
+  .column {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: calc(100% / 4);
+    .content {
+        width: 100%;
     }
   }
+}
+/* On screens that are 992px wide or less, go from one columns to two columns */
+@media screen and (max-width: 992px) {    
+  .column {
+    max-width: calc(100% / 2);
+    .content {
+        width: 100%;
+    }
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    .column {
+      max-width: 100%;
+    }
+  }
+}
