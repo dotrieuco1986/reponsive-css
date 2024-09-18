@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { iconProduct,iconProduct1,iconLogo} from "./image";
+  import { iconProduct,iconProduct1} from "./image";
   import Header from "./components/Header.vue";
   import { ref } from "vue";
 

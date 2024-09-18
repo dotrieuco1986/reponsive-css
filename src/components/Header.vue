@@ -103,7 +103,15 @@ import {iconLogo} from "@/image";
         cursor: pointer;
       }
     }
-    @media screen and (max-width: 1200px) {  
+  }
+  @media screen and (max-width: 1200px) { 
+
+    .logo-row {
+      .text {
+        display: none;
+      }
+    }
+    .button-row {
       .menu-button-container {
         display: flex;
       }
