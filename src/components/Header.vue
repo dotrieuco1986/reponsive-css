@@ -165,7 +165,7 @@ import {iconLogo} from "@/image";
   <div class="header">
     <div class="logo-row" >
       <img :src="iconLogo" alt="logo" class="responsive" /> 
-      <span class="text">Hieu Tran</span>
+      <span class="text">Nguyen Dy</span>
     </div>
     <div class="button-row">
       <input id="menu-toggle" type="checkbox" />
