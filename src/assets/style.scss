@@ -40,11 +40,12 @@ body{
   
   }
 
-  .text-truncate {
+  p.text-truncate {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-top: 0.1rem;
   }
 }   
   

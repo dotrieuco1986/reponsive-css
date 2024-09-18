@@ -23,7 +23,6 @@ import {iconLogo} from "@/image";
     display: flex;
     justify-content: end;
     width: 50%;
-
     .menu {
       display: flex;
       flex-direction: row;
@@ -33,7 +32,7 @@ import {iconLogo} from "@/image";
     }
 
     .menu > li {
-      margin: 0 1rem;
+      margin: 0 0.1rem;
       overflow: hidden;
     }
 
@@ -112,6 +111,7 @@ import {iconLogo} from "@/image";
       }
     }
     .button-row {
+      height: 30px;
       .menu-button-container {
         display: flex;
       }
@@ -133,10 +133,17 @@ import {iconLogo} from "@/image";
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
       }
       #menu-toggle:checked ~ .menu li {
-        border: 1px solid #fff;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
         height: 3.5rem;
         padding: 0.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        &:first-child {
+          border-bottom: none;
+        }
+        &:last-child {
+          border-top: none;
+        }
       }
       .menu > li {
         display: flex;
