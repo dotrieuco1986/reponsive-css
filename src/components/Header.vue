@@ -142,7 +142,7 @@ import {iconLogo} from "@/image";
           border-bottom: none;
         }
         &:last-child {
-          border-top: none;
+          border: none;
         }
       }
       .menu > li {
