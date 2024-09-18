@@ -30,7 +30,6 @@ body{
 
 .content {
   width: 100%;
-  padding: 5px;
 
   img {
     width: inherit;
@@ -77,5 +76,33 @@ body{
     .column {
       max-width: 100%;
     }
+  }
+}
+
+.list-items {
+  --items-per-row: 6;
+  --gutter: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 0 calc(var(--gutter)* -1);
+  padding: 0;
+  width: calc(100% + var(--gutter)* 2);
+
+  .item {
+    width: calc(100% / var(--items-per-row) - var(--gutter) * 2);
+    margin: 0 var(--gutter) var(--gutter);
+  }
+
+  @media screen and (max-width: 1024px) {
+    --items-per-row: 4;
+  }
+
+  @media screen and (max-width: 992px) {
+    --items-per-row: 2;
+  }
+
+  @media screen and (max-width: 768px) {
+    --items-per-row: 1;
   }
 }

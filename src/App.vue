@@ -20,11 +20,13 @@
     <h3 class="title">Photo Cards</h3>
   </div>
   <div class="row">
-    <div class="column" v-for="item in items">
+    <div class="list-items">
+      <div class="item" v-for="item in items">
       <div class="content">
         <img id="object1" :src="item.image" alt="logo" class="responsive" />
         <p class="text-truncate">{{ item.title }}</p>
       </div>
+    </div>
     </div>
   </div>
 </template>
